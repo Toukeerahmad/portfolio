@@ -1,0 +1,126 @@
+html, body {
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    box-sizing: border-box; 
+}
+
+/* Navigation bar styles */
+.nav {
+    background-color: rgb(236, 215, 215);
+    color: rgb(248, 244, 244);
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-top: 2%;
+    flex-wrap: wrap; /* Ensures items wrap on small screens */
+}
+
+.nav h1 {
+    width: 40%;
+    margin-left: 4%;
+    font-size: 2.5vw; /* Responsive font size */
+}
+
+span {
+    color: rgb(243, 159, 34);
+}
+
+.innernav {
+    width: 50%;
+    display: flex;
+    margin-left: auto; /* Automatically adjust margins */
+    margin-right: auto;
+    font-size: 2.5vh; /* Responsive font size */
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.items li {
+    margin-left: 20px; /* Adds space between email and menu icon */
+}
+
+.items h1 {
+    margin-right: 100%;
+    color: rgb(248, 244, 244);
+    font-size: 2vw; /* Responsive font size */
+}
+
+.items img {
+    margin-left: 20px;
+    width: 30px;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 430px) {
+    .innernav {
+        margin-left: 10%; /* Adjust spacing for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    .nav h1 {
+        font-size: 5vw; /* Larger font size for smaller screens */
+    }
+
+    .items h1 {
+        font-size: 4vw; /* Adjust email font size */
+        white-space: normal; /* Allow email to wrap to the next line */
+    }
+
+    .items img {
+        margin-left: 10px;
+    }
+}
+
+/* Body Section */
+.body {
+    background-color: rgb(17, 16, 15);
+    width: 47%; /* Make the body width responsive */
+    height: auto; /* Auto height to adjust with content */
+    margin-top: 10vh; /* Responsive top margin */
+    margin-left: 55px;
+   color: rgb(248, 244, 244);;
+    font-size: 5vh;
+    padding: 20px;
+   
+}
+
+/* Text Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgb(248, 244, 244);
+    border-right: 3px solid;
+    width: 0;
+    animation: typing 4s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+button{
+    color: rgb(248, 244, 244);
+    background-color: rgb(249, 91, 6);
+    height: auto;
+    border-radius: 7px;
+    width: 200px;
+    font-size: 70%;
+}
+
+
